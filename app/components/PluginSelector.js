@@ -1,8 +1,13 @@
 // @flow
 import React, { Component } from 'react';
 // import { Link } from 'react-router-dom';
+import type { allPluginsType } from '../reducers/allPlugins';
 
-export default class ScriptSelector extends Component {
+export default class PluginSelector extends Component {
+  props: {
+    allPlugins: allPluginsType
+  };
+
   render() {
     // fix bootstrap not rendering selects inline with label
     const selectstyle = {
@@ -15,11 +20,14 @@ export default class ScriptSelector extends Component {
           <div className="form-group">
             <label htmlFor="scriptselector" className="col-sm-2 control-label">Script to run:</label>
             <select className="form-control" id="scriptselector" style={selectstyle}>
-              <option>Script 1</option>
-              <option>Script 2</option>
-              <option>Script 3</option>
-              <option>Script 4</option>
-              <option>Script 5</option>
+              {
+                this.props.allPlugins.map(plugin => {
+                  if (plugin.path && plugin.name) {
+                    return <option key={plugin.path}>{plugin.name}</option>;
+                  }
+                  return '';
+                })
+              }
             </select>
           </div>
         </form>

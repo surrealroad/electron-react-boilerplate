@@ -1,0 +1,47 @@
+{
+  "allPlugins": [
+    {
+      "path": "sg_script_1.py",
+      "isRunning": false,
+      "name": "Example script 1",
+      "description": "Example script that can be run, #1",
+      "chooseFolder": false,
+      "chooseFile": false,
+      "saveFile": false,
+      "quitAfter": false,
+      "notifyAfter": false,
+      "visible": true,
+      "authenticateUser": false,
+      "siteURL": ""
+    },
+    {
+      "path": "sg_script_2.py",
+      "isRunning": false,
+      "name": "Example script 2",
+      "description": "Example script that can be run, #2",
+      "chooseFolder": false,
+      "chooseFile": false,
+      "saveFile": false,
+      "quitAfter": false,
+      "notifyAfter": false,
+      "visible": true,
+      "authenticateUser": false,
+      "siteURL": ""
+    },
+    {
+      "path": "sg_script_3.py",
+      "isRunning": false,
+      "name": "Example script 3",
+      "description": "Example script that can be run, #3",
+      "chooseFolder": false,
+      "chooseFile": false,
+      "saveFile": false,
+      "quitAfter": false,
+      "notifyAfter": false,
+      "visible": true,
+      "authenticateUser": false,
+      "siteURL": ""
+    }
+  ],
+  "logText": ""
+}

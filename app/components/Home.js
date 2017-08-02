@@ -1,20 +1,22 @@
 // @flow
 import React, { Component } from 'react';
 // import { Link } from 'react-router-dom';
-import ScriptSelector from './ScriptSelector';
-import RunScript from './RunScript';
-import LogOutput from './LogOutput';
+import PluginSelector from '../containers/PluginSelector';
+import RunPlugin from '../containers/RunPlugin';
+import LogOutput from '../containers/LogOutput';
+import Progress from '../containers/Progress';
 import CopyToClipboard from './CopyToClipboard';
-import ScriptDescription from './ScriptDescription';
+import PluginDescription from './PluginDescription';
 
 export default class Home extends Component {
   render() {
     return (
       <div>
         <div className="container-fluid" data-tid="container">
-          <ScriptSelector />
-          <ScriptDescription />
-          <RunScript />
+          <PluginSelector />
+          <PluginDescription />
+          <RunPlugin />
+          <Progress />
           <LogOutput />
           <CopyToClipboard />
         </div>
