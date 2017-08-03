@@ -43,5 +43,8 @@
       "siteURL": ""
     }
   ],
-  "logText": ""
+  "logText": "",
+  "currentPlugin": {
+    "isRunning": false
+  }
 }

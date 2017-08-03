@@ -31,8 +31,8 @@
   },
   "browserslist": "electron 1.6",
   "build": {
-    "productName": "ElectronReact",
-    "appId": "org.develar.ElectronReact",
+    "productName": "Bandolier",
+    "appId": "com.surrealroad.bandolier",
     "files": [
       "dist/",
       "node_modules/",
@@ -69,7 +69,8 @@
     "directories": {
       "buildResources": "resources",
       "output": "release"
-    }
+    },
+    "extraResources": ["wrapper.py"]
   },
   "repository": {
     "type": "git",

@@ -4,7 +4,7 @@ import Progress from '../components/Progress';
 
 function mapStateToProps(state) {
   return {
-    hidden: !state.plugin.isRunning,
+    hidden: !state.currentPlugin.isRunning,
     size: 25
   };
 }
