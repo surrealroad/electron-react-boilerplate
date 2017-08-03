@@ -5,7 +5,7 @@ import { ProgressCircle } from 'react-desktop/macOs';
 export default class Progress extends Component {
   props: {
     size: 25,
-    hidden: true
+    hidden: boolean
   };
 
   render() {
