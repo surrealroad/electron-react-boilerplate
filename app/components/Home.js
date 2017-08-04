@@ -5,7 +5,7 @@ import PluginSelector from '../containers/PluginSelector';
 import RunPlugin from '../containers/RunPlugin';
 import LogOutput from '../containers/LogOutput';
 import Progress from '../containers/Progress';
-import CopyToClipboard from './CopyToClipboard';
+import CopyToClipboard from '../containers/CopyToClipboard';
 import PluginDescription from './PluginDescription';
 
 export default class Home extends Component {
