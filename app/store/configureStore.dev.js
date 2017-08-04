@@ -4,7 +4,7 @@ import { createHashHistory } from 'history';
 import { routerMiddleware, routerActions } from 'react-router-redux';
 import { createLogger } from 'redux-logger';
 import rootReducer from '../reducers';
-import * as pluginActions from '../actions/plugin';
+import * as pluginActions from '../actions/currentPlugin';
 import * as allPluginsActions from '../actions/allPlugins';
 import type { allPluginsType } from '../reducers/allPlugins';
 import streamOutput from '../middleware/executePlugin';

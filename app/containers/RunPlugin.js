@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 // import { Link } from 'react-router-dom';
 import RunPlugin from '../components/RunPlugin';
-import * as PluginActions from '../actions/plugin';
+import * as PluginActions from '../actions/currentPlugin';
 
 
 function mapStateToProps(state) {

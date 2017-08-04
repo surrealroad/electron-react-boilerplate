@@ -6,7 +6,7 @@ import RunPlugin from '../containers/RunPlugin';
 import LogOutput from '../containers/LogOutput';
 import Progress from '../containers/Progress';
 import CopyToClipboard from '../containers/CopyToClipboard';
-import PluginDescription from './PluginDescription';
+import PluginDescription from '../containers/PluginDescription';
 
 export default class Home extends Component {
   render() {

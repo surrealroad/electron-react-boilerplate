@@ -2,7 +2,7 @@
 import { ADD_PLUGIN, REMOVE_ALL_PLUGINS } from '../actions/allPlugins';
 import plugin from './plugin';
 import type { pluginType } from './plugin';
-import initialPluginState from '../store/initialState.json';
+import initialState from '../store/initialState.json';
 
 type actionType = {
   type: string
@@ -10,7 +10,7 @@ type actionType = {
 
 export type allPluginsType = Array<?pluginType>;
 
-export default function allPlugins(state: allPluginsType = initialPluginState.allPlugins,
+export default function allPlugins(state: allPluginsType = initialState.allPlugins,
   action: actionType) {
   // const hasScript = state.some(plugin === {});
 
@@ -20,10 +20,11 @@ export default function allPlugins(state: allPluginsType = initialPluginState.al
       //     state :
       return [
         ...state,
-        plugin(initialPluginState.allPlugins[0], action),
+        plugin(initialState.allPlugins[0], action),
       ];
     case REMOVE_ALL_PLUGINS:
       return [];
+
     default:
       return state;
   }

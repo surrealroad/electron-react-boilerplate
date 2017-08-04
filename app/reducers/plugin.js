@@ -1,11 +1,11 @@
 // @flow
-import { ADD_PLUGIN, EXEC_PLUGIN } from '../actions/plugin';
 
 type actionType = {
   type: string
 };
 
 export type pluginType = {
+  "id": number,
   "path": string,
   "isRunning": boolean,
   "name": string,
@@ -22,10 +22,7 @@ export type pluginType = {
 
 export default function plugin(state: {} = {}, action: actionType) {
   switch (action.type) {
-    case ADD_PLUGIN:
-      return {};
-    case EXEC_PLUGIN:
-      return state;
+
     default:
       return state;
   }

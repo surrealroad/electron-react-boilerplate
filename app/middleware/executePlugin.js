@@ -1,7 +1,6 @@
 import * as child from 'child_process';
 import { APPEND_LOG } from '../actions/logOutput';
-import { EXEC_PLUGIN } from '../actions/plugin';
-import { START_RUNNING, STOP_RUNNING } from '../reducers/currentPlugin';
+import { EXEC_PLUGIN, START_RUNNING, STOP_RUNNING } from '../actions/currentPlugin';
 
 function createStreamOutputMiddleware() {
   return (store) => (next) => (action) => {

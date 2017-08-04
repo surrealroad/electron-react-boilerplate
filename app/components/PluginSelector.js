@@ -5,8 +5,14 @@ import type { allPluginsType } from '../reducers/allPlugins';
 
 export default class PluginSelector extends Component {
   props: {
-    allPlugins: allPluginsType
+    allPlugins: allPluginsType,
+    selectPlugin: () => void
   };
+
+  handleSelectChange = (event) => { // there's apparantly no way to make flowtype work
+    console.log(`Selected plugin ${event.target.value}`);
+    //store.dispatch({ type: APPEND_LOG, payload: 'yelllow' });
+  }
 
   render() {
     // fix bootstrap not rendering selects inline with label
@@ -19,11 +25,11 @@ export default class PluginSelector extends Component {
         <form className="form-horizontal">
           <div className="form-group">
             <label htmlFor="scriptselector" className="col-sm-2 control-label">Script to run:</label>
-            <select className="form-control" id="scriptselector" style={selectstyle}>
+            <select className="form-control" id="scriptselector" style={selectstyle} onChange={(event) => this.props.selectPlugin(Number(event.target.value))}>
               {
                 this.props.allPlugins.map(plugin => {
-                  if (plugin.path && plugin.name) {
-                    return <option key={plugin.path}>{plugin.name}</option>;
+                  if (plugin.id !== undefined && plugin.name !== undefined) {
+                    return <option key={plugin.id} value={plugin.id}>{plugin.name}</option>;
                   }
                   return '';
                 })

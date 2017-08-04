@@ -1,6 +1,7 @@
 {
   "allPlugins": [
     {
+      "id": 1,
       "path": "sg_script_1.py",
       "isRunning": false,
       "name": "Example script 1",
@@ -15,6 +16,7 @@
       "siteURL": ""
     },
     {
+      "id": 2,
       "path": "sg_script_2.py",
       "isRunning": false,
       "name": "Example script 2",
@@ -29,6 +31,7 @@
       "siteURL": ""
     },
     {
+      "id": 3,
       "path": "sg_script_3.py",
       "isRunning": false,
       "name": "Example script 3",
@@ -45,6 +48,7 @@
   ],
   "logText": "",
   "currentPlugin": {
-    "isRunning": false
+    "isRunning": false,
+    "id": 1
   }
 }

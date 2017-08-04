@@ -1,11 +1,9 @@
 // @flow
 import React, { Component } from 'react';
 // import { Link } from 'react-router-dom';
-import type { allPluginsType } from '../reducers/allPlugins';
 
 export default class RunPlugin extends Component {
   props: {
-    allPlugins: allPluginsType,
     exec: () => void
   };
 
