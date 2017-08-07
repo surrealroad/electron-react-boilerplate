@@ -1,6 +1,6 @@
 // @flow
 import { clipboard } from 'electron';
-import { APPEND_LOG } from '../actions/logOutput';
+import { APPEND_LOG, SET_LOG } from '../actions/logOutput';
 import { COPY_TO_CLIPBOARD } from '../actions/clipboard';
 import initialState from '../store/initialState.json';
 
@@ -13,6 +13,9 @@ export default function logOutput(state: logOutputType = initialState.logText, a
   switch (action.type) {
     case APPEND_LOG:
       return `${state}${action.payload}`;
+
+    case SET_LOG:
+      return `${action.payload}`;
 
     case COPY_TO_CLIPBOARD:
       clipboard.writeText(state);
