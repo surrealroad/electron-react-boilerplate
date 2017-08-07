@@ -4,14 +4,15 @@ import React, { Component } from 'react';
 
 export default class RunPlugin extends Component {
   props: {
-    exec: () => void
+    exec: () => void,
+    disabled: boolean
   };
 
   render() {
     const { exec } = this.props;
     return (
       <div>
-        <button onClick={exec} className="btn btn-primary" type="submit">
+        <button onClick={exec} className="btn btn-primary" type="submit" disabled={this.props.disabled}>
           Run
         </button>
       </div>

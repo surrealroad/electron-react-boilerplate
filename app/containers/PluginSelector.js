@@ -6,7 +6,8 @@ import * as currentPluginActions from '../actions/currentPlugin';
 
 function mapStateToProps(state) {
   return {
-    allPlugins: state.allPlugins
+    allPlugins: state.allPlugins,
+    disabled: state.currentPlugin.isRunning
   };
 }
 

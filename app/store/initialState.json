@@ -3,7 +3,6 @@
     {
       "id": 1,
       "path": "sg_script_1.py",
-      "isRunning": false,
       "name": "Example script 1",
       "description": "Example script that can be run, #1",
       "chooseFolder": false,
@@ -18,7 +17,6 @@
     {
       "id": 2,
       "path": "sg_script_2.py",
-      "isRunning": false,
       "name": "Example script 2",
       "description": "Example script that can be run, #2",
       "chooseFolder": false,
@@ -33,7 +31,6 @@
     {
       "id": 3,
       "path": "sg_script_3.py",
-      "isRunning": false,
       "name": "Example script 3",
       "description": "Example script that can be run, #3",
       "chooseFolder": false,

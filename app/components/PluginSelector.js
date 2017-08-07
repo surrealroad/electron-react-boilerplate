@@ -6,7 +6,8 @@ import type { allPluginsType } from '../reducers/allPlugins';
 export default class PluginSelector extends Component {
   props: {
     allPlugins: allPluginsType,
-    selectPlugin: () => void
+    selectPlugin: () => void,
+    disabled: boolean
   };
 
   handleSelectChange = (event) => { // there's apparantly no way to make flowtype work
@@ -25,7 +26,7 @@ export default class PluginSelector extends Component {
         <form className="form-horizontal">
           <div className="form-group">
             <label htmlFor="scriptselector" className="col-sm-2 control-label">Script to run:</label>
-            <select className="form-control" id="scriptselector" style={selectstyle} onChange={(event) => this.props.selectPlugin(Number(event.target.value))}>
+            <select className="form-control" id="scriptselector" style={selectstyle} onChange={(event) => this.props.selectPlugin(Number(event.target.value))} disabled={this.props.disabled}>
               {
                 this.props.allPlugins.map(plugin => {
                   if (plugin.id !== undefined && plugin.name !== undefined) {

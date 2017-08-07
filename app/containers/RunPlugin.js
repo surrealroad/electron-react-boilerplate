@@ -8,7 +8,7 @@ import * as PluginActions from '../actions/currentPlugin';
 
 function mapStateToProps(state) {
   return {
-    allPlugins: state.allPlugins
+    disabled: state.currentPlugin.isRunning
   };
 }
 

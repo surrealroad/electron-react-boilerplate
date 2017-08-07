@@ -7,7 +7,6 @@ type actionType = {
 export type pluginType = {
   "id": number,
   "path": string,
-  "isRunning": boolean,
   "name": string,
   "description": string,
   "chooseFolder": boolean,

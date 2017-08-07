@@ -14,6 +14,10 @@ function createStreamOutputMiddleware() {
 
     switch (action.type) {
       case EXEC_PLUGIN:
+        if (store.getState().currentPlugin.isRunning) {
+          console.log('Unable to start a new plugin as one is currently running');
+          break;
+        }
         // https://stackoverflow.com/questions/13964155/get-javascript-object-from-array-of-objects-by-value-or-property
         selectedPlugin = store.getState().allPlugins.filter(
           (plugin) => plugin.id === store.getState().currentPlugin.id
