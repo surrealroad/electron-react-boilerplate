@@ -70,7 +70,10 @@
       "buildResources": "resources",
       "output": "release"
     },
-    "extraResources": ["wrapper.py"]
+    "extraResources": [
+      "wrapper.py",
+      "API/shotgun_api3"
+    ]
   },
   "repository": {
     "type": "git",
