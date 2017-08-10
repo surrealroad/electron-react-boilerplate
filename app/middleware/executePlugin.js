@@ -23,6 +23,12 @@ function createStreamOutputMiddleware() {
           (plugin) => plugin.id === store.getState().currentPlugin.id
         )[0];
 
+        // set arguments
+
+        if (store.getState().currentPlugin.params) {
+          pluginArguments.push(JSON.stringify(store.getState().currentPlugin.params));
+        }
+
         console.log(`Running ${selectedPlugin.path}:${pluginFunction} with arguments: ${pluginArguments}`);
         store.dispatch({ type: START_RUNNING });
         store.dispatch({ type: SET_LOG, payload: `Running ${selectedPlugin.name}\n` });
@@ -32,7 +38,7 @@ function createStreamOutputMiddleware() {
         // https://github.com/chentsulin/electron-react-boilerplate/issues/599
         proc = child.spawn('/usr/bin/python', ['-u', `${process.cwd()}/wrapper.py`,
           `${process.cwd()}/${selectedPlugin.path}`,
-          `${pluginFunction}`],
+          `${pluginFunction}`].concat(pluginArguments),
           { env });
         proc.stdout.on('data', data => {
           console.log(data.toString());

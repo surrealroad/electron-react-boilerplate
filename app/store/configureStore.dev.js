@@ -54,10 +54,6 @@ const configureStore = (initialState: ?allPluginsType) => {
   enhancers.push(applyMiddleware(...middleware));
   const enhancer = composeEnhancers(...enhancers);
 
-  console.log(
-    'Initial STATE: ', initialState
-  );
-
   // Create Store
   const store = createStore(rootReducer, initialState, enhancer);
 

@@ -5,12 +5,9 @@ import { bindActionCreators } from 'redux';
 import CopyToClipboard from '../components/CopyToClipboard';
 import * as ClipboardActions from '../actions/clipboard';
 
-function mapStateToProps(state) {
-  return {};
-}
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators(ClipboardActions, dispatch);
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(CopyToClipboard);
+export default connect(null, mapDispatchToProps)(CopyToClipboard);

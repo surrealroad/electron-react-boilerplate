@@ -46,6 +46,7 @@
   "logText": "",
   "currentPlugin": {
     "isRunning": false,
-    "id": 1
+    "id": 1,
+    "params": {}
   }
 }

@@ -1,9 +1,10 @@
 // @flow
 import initialState from '../store/initialState.json';
-import { START_RUNNING, STOP_RUNNING, SELECT_PLUGIN } from '../actions/currentPlugin';
+import { START_RUNNING, STOP_RUNNING, SELECT_PLUGIN, SET_PLUGIN_PARAMS } from '../actions/currentPlugin';
 
 type actionType = { type: string }
- | { type: string, payload: number }; // TODO WHY IS THIS SO MAD?
+ | { type: string, payload: number }
+ | { type: string, payload: {} }; // TODO WHY IS THIS SO MAD?
 
 export type currentPluginType = {};
 
@@ -17,6 +18,8 @@ export default function currentPlugin(state: currentPluginType = initialState.cu
     case SELECT_PLUGIN:
       console.log(`Selected plugin ${action.payload}`);
       return { ...state, id: action.payload };
+    case SET_PLUGIN_PARAMS:
+      return { ...state, params: action.payload };
 
     default:
       return state;

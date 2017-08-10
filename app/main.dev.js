@@ -40,6 +40,10 @@ const installExtensions = async () => {
     .catch(console.log);
 };
 
+// enable bandolier:// urls
+if (!app.isDefaultProtocolClient('bandolier')) {
+  app.setAsDefaultProtocolClient('bandolier');
+}
 
 /**
  * Add event listeners...
@@ -75,6 +79,9 @@ app.on('ready', async () => {
     }
     mainWindow.show();
     mainWindow.focus();
+
+    // https://stackoverflow.com/a/31759944/262455
+    console.log(`Launched with options: ${process.argv}`);
   });
 
   mainWindow.on('closed', () => {

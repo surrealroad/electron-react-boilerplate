@@ -10,11 +10,6 @@ export default class PluginSelector extends Component {
     disabled: boolean
   };
 
-  handleSelectChange = (event) => { // there's apparantly no way to make flowtype work
-    console.log(`Selected plugin ${event.target.value}`);
-    //store.dispatch({ type: APPEND_LOG, payload: 'yelllow' });
-  }
-
   render() {
     // fix bootstrap not rendering selects inline with label
     const selectstyle = {
