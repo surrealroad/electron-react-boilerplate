@@ -5,10 +5,11 @@ import { bindActionCreators } from 'redux';
 import RunPlugin from '../components/RunPlugin';
 import * as PluginActions from '../actions/currentPlugin';
 
-
 function mapStateToProps(state) {
+  // https://stackoverflow.com/questions/13964155/get-javascript-object-from-array-of-objects-by-value-or-property
+  const selectedPlugin = state.allPlugins.filter(plugin => plugin.id === state.currentPlugin.id)[0];
   return {
-    disabled: state.currentPlugin.isRunning
+    disabled: state.currentPlugin.isRunning || selectedPlugin === undefined,
   };
 }
 
