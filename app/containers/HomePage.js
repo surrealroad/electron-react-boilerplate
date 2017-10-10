@@ -127,7 +127,7 @@ export class HomePage extends Component {
           this.props.addPlugin(pluginSettings);
           // reset to the first plugin
           // TODO make this less hacky
-          this.props.selectPlugin(1);
+          // this.props.selectPlugin(1);
         } else {
           console.log(`Skipping script ${pluginSettings.path} as it has no @SGS_NAME value set.`);
         }

@@ -1,6 +1,7 @@
 // @flow
 import React, { Component } from 'react';
 // import { Link } from 'react-router-dom';
+import { Button } from 'hig-react';
 
 export default class CopyToClipboard extends Component {
   props: {
@@ -11,9 +12,7 @@ export default class CopyToClipboard extends Component {
     const { copy } = this.props;
     return (
       <div>
-        <button onClick={copy} className="btn btn-default" type="submit">
-          Copy to Clipboard
-        </button>
+        <Button onClick={copy} title="Copy to Clipboard" type="secondary" />
       </div>
     );
   }
