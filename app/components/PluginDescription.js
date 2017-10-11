@@ -1,6 +1,7 @@
 // @flow
 import React, { Component } from 'react';
 // import { Link } from 'react-router-dom';
+import { Caption } from 'hig-react';
 
 export default class PluginDescription extends Component {
   props: {
@@ -10,9 +11,7 @@ export default class PluginDescription extends Component {
   render() {
     return (
       <div>
-        <p>
-          <em>{this.props.pluginDescription}</em>
-        </p>
+        <Caption>{this.props.pluginDescription}</Caption>
       </div>
     );
   }

@@ -1,7 +1,8 @@
 // @flow
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 // import { Link } from 'react-router-dom';
+import { H3, Body } from 'hig-react';
 
 export default class LogOutput extends Component {
   props: {
@@ -16,12 +17,15 @@ export default class LogOutput extends Component {
   render() {
     return (
       <div>
-        <form>
-          <div className="form-group">
-            <label htmlFor="log" className="control-label">Log:</label>
-            <textarea className="form-control" rows="8" id="log" value={this.props.logText} ref={(textarea) => { this.textarea = textarea; }} />
-          </div>
-        </form>
+        <H3>Log:</H3>
+        <div
+          id="log"
+          ref={textarea => {
+            this.textarea = textarea;
+          }}
+        >
+          <Body>{this.props.logText}</Body>
+        </div>
       </div>
     );
   }
