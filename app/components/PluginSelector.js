@@ -12,7 +12,8 @@ export default class PluginSelector extends Component {
   props: {
     allPlugins: allPluginsType,
     selectPlugin: () => void,
-    disabled: boolean
+    disabled: boolean,
+    currentPluginID: number
   };
 
   render() {
@@ -21,6 +22,7 @@ export default class PluginSelector extends Component {
         <Dropdown
           id="scriptselector"
           label="Script to run"
+          value={this.props.currentPluginID.toString()}
           onChange={event => {
             this.props.selectPlugin(Number(event));
           }}

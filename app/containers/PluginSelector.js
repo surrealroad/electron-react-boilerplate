@@ -10,6 +10,7 @@ function mapStateToProps(state) {
   return {
     allPlugins: state.allPlugins,
     disabled: state.currentPlugin.isRunning || selectedPlugin === undefined,
+    currentPluginID: state.currentPlugin.id,
   };
 }
 
